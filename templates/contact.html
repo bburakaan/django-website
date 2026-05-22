@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+<section class="section contact-section">
+  <div class="section-heading">
+    <span>01 //</span>
+    <div>
+      <p>CONTACT_FORM.post</p>
+      <h2>Contact</h2>
+    </div>
+  </div>
+
+  <div class="contact-layout">
+    <div>
+      <p class="contact-lead">{{ about_myself_footer }}</p>
+      <div class="contact-links">
+        <a href="mailto:{{ email }}"><span>E-POSTA</span><strong>{{ email }}</strong></a>
+        <a href="tel:+905053269261"><span>PHONE</span><strong>{{ phone }}</strong></a>
+        <a href="{{ github }}" target="_blank" rel="noreferrer"><span>GITHUB</span><strong>github.com/bburakaan</strong></a>
+        <a href="{{ linkedin }}" target="_blank" rel="noreferrer"><span>LINKEDIN</span><strong>Burak Kaan Ocak</strong></a>
+        <a href="{% get_media_prefix %}BURAK_KAAN_OCAK_CV.pdf" target="_blank" rel="noreferrer"><span>CV PDF</span><strong>BURAK_KAAN_OCAK_CV.pdf</strong></a>
+      </div>
+    </div>
+
+    <form class="contact-form">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="{{ home_banner_name }}">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="{{ email }}">
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" id="message" rows="5" placeholder="Mesajin"></textarea>
+      </div>
+      <button type="button" class="button primary">Gonder</button>
+    </form>
+  </div>
+</section>
+{% endblock %}
